@@ -169,3 +169,10 @@ By default, Flyway autowires the (`@Primary`) `DataSource` in your context and u
 
 reference: 
 - https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
+
+
+### Thoughts/Discussions:
+- Should flyway run in CI using command line or as a part of Spring Boot application startup?
+- No point of writing undo scripts if using community edition?
+- Should we run flyway for all unit tests and integration tests?
+- How to use Test Containers easily (share).
