@@ -17,6 +17,7 @@ class SpringBootFlywaySampleApplicationTests extends TestContainerInitializer {
 
     @AfterEach
     void cleanup(@Autowired Flyway flyway) {
+        // requires "spring.flyway.clean-disabled=false" property
         flyway.clean();
     }
 
