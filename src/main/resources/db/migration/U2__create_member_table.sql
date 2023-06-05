@@ -1,0 +1,4 @@
+ALTER TABLE member
+DROP CONSTRAINT fk_member_team;
+
+DROP TABLE IF EXISTS member;

@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    show-sql: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password:
+    url: jdbc:postgresql://localhost:5432/test
+
+  flyway:
+    enabled: true # default: true
+    locations: classpath:db/migration # default: db/migration
+    baseline-on-migrate: true # default: false
