@@ -20,10 +20,10 @@ import java.util.List;
 import java.util.UUID;
 
 @SpringBootApplication
-public class SpringBootFlywaySampleApplication {
+public class MainApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootFlywaySampleApplication.class, args);
+        SpringApplication.run(MainApplication.class, args);
     }
 
 }
