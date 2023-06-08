@@ -1,5 +1,6 @@
-package io.jay.app;
+package io.jay.app.initializer;
 
+import io.jay.app.initializer.TestContainerInitializer;
 import org.springframework.test.context.ContextConfiguration;
 
 import java.lang.annotation.ElementType;

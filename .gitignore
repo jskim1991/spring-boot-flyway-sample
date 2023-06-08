@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+flyway-commandline-9.19.3-macosx-x64.tar.gz
+flyway-9.19.3
+report.html
+report.json

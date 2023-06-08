@@ -1,4 +1,4 @@
-package io.jay.app;
+package io.jay.app.initializer;
 
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;

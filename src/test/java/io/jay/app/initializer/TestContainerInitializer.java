@@ -1,4 +1,4 @@
-package io.jay.app;
+package io.jay.app.initializer;
 
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
@@ -8,7 +8,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 public class TestContainerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
     PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:15")
-            .withDatabaseName("unit-test")
+            .withDatabaseName("test-db")
             .withUsername("test")
             .withPassword("test");
 
