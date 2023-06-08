@@ -7,17 +7,14 @@ import org.testcontainers.containers.PostgreSQLContainer;
 
 public class TestContainerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-    static PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:15")
+    PostgreSQLContainer postgreSQLContainer = new PostgreSQLContainer("postgres:15")
             .withDatabaseName("unit-test")
             .withUsername("test")
             .withPassword("test");
 
-    static {
-        postgreSQLContainer.start();
-    }
-
     @Override
     public void initialize(ConfigurableApplicationContext ctx) {
+        postgreSQLContainer.start();
         TestPropertyValues.of(
                 "spring.datasource.url=" + postgreSQLContainer.getJdbcUrl(),
                 "spring.datasource.username=" + postgreSQLContainer.getUsername(),

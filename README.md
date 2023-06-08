@@ -70,11 +70,7 @@ ALTER TABLE owner ADD driver_license_id VARCHAR;
 INSERT INTO brand (name) VALUES ('DeLorean');
 ```
 
-Undo Migrations: 
-- Applied last and applied everytime checksum changes
-- Typically used: 
-  - (Re)creating views/procedures/functions/packages/... 
-  - bulk reference data reinserts
+Undo Migrations:
 ```sql
 -- U1__drop_tables.sql
 
@@ -86,6 +82,10 @@ DROP TABLE car;
 ```
 
 Repeatable Migrations:
+- Applied last and applied everytime checksum changes
+- Typically used:
+  - (Re)creating views/procedures/functions/packages/...
+  - bulk reference data reinserts
 ```sql
 -- R__blue_cars_view.sql
 
