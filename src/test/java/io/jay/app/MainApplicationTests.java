@@ -1,19 +1,20 @@
 package io.jay.app;
 
-import io.jay.app.initializer.ContainerTest;
+import io.jay.app.initializer.TestContainerConfiguration;
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest(properties = {
         "spring.flyway.clean-disabled=false"
 })
 @ActiveProfiles("test")
-@ContainerTest
+@Import(TestContainerConfiguration.class)
 class MainApplicationTests {
 
     @BeforeEach
@@ -31,5 +32,4 @@ class MainApplicationTests {
     void contextLoads() {
 
     }
-
 }
